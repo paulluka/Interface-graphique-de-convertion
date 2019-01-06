@@ -53,14 +53,15 @@ def main():
 
 	#base 10 et 16 choisis
 	if reponse_base_dix.get() == 1:
-		print(convertion_binaire_en_decimal())
+		interface_reponse_decimal = convertion_binaire_en_decimal()
+		print(interface_reponse_decimal)
 		if reponse_base_seize.get() == 1:
 			print(convertir_en_hexadecimale())
 	#base 16 choisie
 	if reponse_base_dix.get() == 0:
 		if reponse_base_seize.get() == 1:
-			print(convertir_en_hexadecimale())
-
+			interface_reponse_hexadecimale = convertir_en_hexadecimale()
+			print(interface_reponse_hexadecimale)
 	#Si rien n'est sélctionnée
 	if reponse_base_dix.get() == 0 and reponse_base_seize.get() == 0:
 		reponse_base_dix.set(1)
